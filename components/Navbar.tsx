@@ -21,11 +21,11 @@ import {
 } from 'lucide-react';
 
 interface NavbarProps {
-  onOpenDemoModal: () => void;
-  onOpenLoginModal: () => void;
+  onOpenDemoModal?: () => void;
+  onOpenLoginModal?: () => void;
 }
 
-export default function Navbar({ onOpenDemoModal, onOpenLoginModal }: NavbarProps) {
+export default function Navbar({}: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -90,14 +90,15 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }: NavbarProp
 
             {/* CTA Buttons */}
             <div className="hidden sm:flex items-center gap-2.5 shrink-0">
-              <button
-                type="button"
-                onClick={onOpenLoginModal}
+              <a
+                href="https://panel.alphadesk.ir"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-3 py-1.5 text-xs font-medium text-[#CCC] hover:text-white bg-[#181818] hover:bg-[#222222] border border-[#282828] rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
               >
                 <LogIn className="w-3.5 h-3.5 text-[#1DB954]" />
                 <span>ورود</span>
-              </button>
+              </a>
 
               <a
                 href="#pricing"
@@ -145,17 +146,16 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }: NavbarProp
             </div>
 
             <div className="pt-2 border-t border-[#282828] flex flex-col sm:flex-row gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  onOpenLoginModal();
-                }}
+              <a
+                href="https://panel.alphadesk.ir"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full py-2 text-xs font-medium text-white bg-[#222222] border border-[#282828] rounded-lg flex items-center justify-center gap-2"
               >
                 <LogIn className="w-3.5 h-3.5 text-[#1DB954]" />
                 <span>ورود به سامانه</span>
-              </button>
+              </a>
             </div>
           </div>
         )}

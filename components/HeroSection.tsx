@@ -95,15 +95,14 @@ export default function HeroSection({
               <ArrowLeft className="w-3.5 h-3.5" />
             </button>
 
-            {onOpenLoginModal && (
-              <button
-                type="button"
-                onClick={onOpenLoginModal}
-                className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold text-[#CCC] hover:text-white bg-[#181818] hover:bg-[#202020] border border-[#282828] rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>ورود به سامانه</span>
-              </button>
-            )}
+            <a
+              href="https://panel.alphadesk.ir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold text-[#CCC] hover:text-white bg-[#181818] hover:bg-[#202020] border border-[#282828] rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>ورود به سامانه</span>
+            </a>
           </div>
         </div>
 
