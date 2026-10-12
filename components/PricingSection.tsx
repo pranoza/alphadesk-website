@@ -69,9 +69,9 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
       id: 'enterprise',
       name: 'پلن سازمانی',
       tagline: 'برای هلدینگ‌ها، شعب نامحدود و سازمان‌های نیازمند سرور مستقل',
-      monthlyPrice: 'تماس سازمانی',
+      monthlyPrice: 'راه‌اندازی سفارشی',
       annualMonthlyPrice: 'راه‌اندازی سفارشی',
-      setupFee: 'راه‌اندازی سفارشی',
+      setupFee: 'سفارشی',
       userLimit: 'کاربران و شعب نامحدود',
       popular: false,
       badge: 'سرور اختصاصی',
@@ -109,7 +109,7 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
           </p>
 
           {/* Billing Toggle */}
-          <div className="pt-4 inline-flex items-center p-1 rounded-xl bg-[#1a1a1a] border border-[#2a2a2a]">
+          <div className="mt-4 inline-flex items-center p-1 rounded-xl bg-[#1a1a1a] border border-[#2a2a2a]">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
@@ -131,7 +131,13 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
               }`}
             >
               <span>سالانه</span>
-              <span className="text-[10px] bg-black/20 text-black px-1.5 py-0.2 rounded font-mono font-bold">
+              <span
+                className={`text-[10px] px-1.5 py-0.5 rounded font-bold transition-all ${
+                  billingCycle === 'annually'
+                    ? 'bg-black/25 text-black'
+                    : 'bg-[#1DB954]/20 text-[#1ED760] border border-[#1DB954]/30'
+                }`}
+              >
                 ۲۰٪ تخفیف
               </span>
             </button>
