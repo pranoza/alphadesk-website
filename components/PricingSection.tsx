@@ -26,8 +26,9 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
       id: 'starter',
       name: 'پلن پایه',
       tagline: 'مناسب تیم‌های فروش چابک و در حال شکل‌گیری',
-      monthlyPrice: '۱٬۹۵۰٬۰۰۰',
-      annualMonthlyPrice: '۱٬۵۶۰٬۰۰۰', // 20% off
+      monthlyPrice: '۹٬۵۰۰٬۰۰۰',
+      annualMonthlyPrice: '۷٬۶۰۰٬۰۰۰', // 20% off
+      setupFee: '۴۹ میلیون تومان',
       userLimit: 'تا ۵ کاربر هم‌زمان',
       popular: false,
       features: [
@@ -45,8 +46,9 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
       id: 'pro',
       name: 'پلن حرفه‌ای',
       tagline: 'پیشنهاد برگزیده برای شرکت‌های فعال در حوزه فروش',
-      monthlyPrice: '۴٬۸۵۰٬۰۰۰',
-      annualMonthlyPrice: '۳٬۸۸۰٬۰۰۰', // 20% off
+      monthlyPrice: '۱۳٬۵۰۰٬۰۰۰',
+      annualMonthlyPrice: '۱۰٬۸۰۰٬۰۰۰', // 20% off
+      setupFee: '۶۹ میلیون تومان',
       userLimit: 'تا ۱۵ کاربر هم‌زمان (+ امکان کاربر اضافه)',
       popular: true,
       badge: 'محبوب‌ترین پلن سازمانی',
@@ -68,7 +70,8 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
       name: 'پلن سازمانی',
       tagline: 'برای هلدینگ‌ها، شعب نامحدود و سازمان‌های نیازمند سرور مستقل',
       monthlyPrice: 'تماس سازمانی',
-      annualMonthlyPrice: 'استقرار سفارشی',
+      annualMonthlyPrice: 'راه‌اندازی سفارشی',
+      setupFee: 'راه‌اندازی سفارشی',
       userLimit: 'کاربران و شعب نامحدود',
       popular: false,
       badge: 'سرور اختصاصی',
@@ -165,23 +168,30 @@ export default function PricingSection({ onOpenDemoModal }: PricingSectionProps)
                   </div>
 
                   {/* Price */}
-                  <div className="p-4 rounded-2xl bg-[#1e1e1e] border border-[#282828] mb-6">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-2xl sm:text-3xl font-black text-white font-mono">
-                        {displayPrice}
-                      </span>
-                      {plan.id !== 'enterprise' && (
-                        <span className="text-xs text-[#888]">تومان / ماه</span>
+                  <div className="p-4 rounded-2xl bg-[#1e1e1e] border border-[#282828] mb-6 space-y-2.5">
+                    <div>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-2xl sm:text-3xl font-black text-white font-mono">
+                          {displayPrice}
+                        </span>
+                        {plan.id !== 'enterprise' && (
+                          <span className="text-xs text-[#888]">تومان / ماه</span>
+                        )}
+                      </div>
+                      <div className="text-[11px] text-[#1DB954] font-medium mt-1">
+                        {plan.userLimit}
+                      </div>
+                      {isAnnual && plan.id !== 'enterprise' && (
+                        <div className="text-[10px] text-[#888] mt-1">
+                          صورت‌حساب به صورت یک‌ساله با احتساب تخفیف
+                        </div>
                       )}
                     </div>
-                    <div className="text-[11px] text-[#1DB954] font-medium mt-1">
-                      {plan.userLimit}
+
+                    <div className="pt-2.5 border-t border-[#2a2a2a] flex items-center justify-between text-xs">
+                      <span className="text-[#888]">هزینه راه‌اندازی:</span>
+                      <span className="font-bold text-white">{plan.setupFee}</span>
                     </div>
-                    {isAnnual && plan.id !== 'enterprise' && (
-                      <div className="text-[10px] text-[#888] mt-1">
-                        صورت‌حساب به صورت یک‌ساله با احتساب تخفیف
-                      </div>
-                    )}
                   </div>
 
                   {/* Feature Checklist */}
