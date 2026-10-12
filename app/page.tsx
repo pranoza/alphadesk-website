@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import PainVsSolution from '@/components/PainVsSolution';
@@ -14,6 +14,10 @@ import DemoModal from '@/components/DemoModal';
 
 export default function HomePage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = 'آلفادسک | سامانه مدیریت مشتریان و تیم فروش';
+  }, []);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);

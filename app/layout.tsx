@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: '68557704',
+  title: 'آلفادسک | سامانه مدیریت مشتریان و تیم فروش',
   description: 'پایان سوختن سرنخ‌ها و سردرگمی بازاریاب‌ها با سامانه آلفادسک - مدیریت مشتریان، حوضچه آزاد سرنخ‌ها، مدیریت شعب هلدینگ و ارزیابی لحظه‌ای عملکرد فروش.',
   keywords: [
     'سامانه فروش',
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'آلفادسک' }],
   openGraph: {
-    title: '68557704',
+    title: 'آلفادسک | سامانه مدیریت مشتریان و تیم فروش',
     description: 'سامانه مدیریت مشتریان و تیم فروش آلفادسک با حوضچه آزاد سرنخ‌ها و مدیریت شعب هلدینگ.',
     locale: 'fa_IR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '68557704',
+    title: 'آلفادسک | سامانه مدیریت مشتریان و تیم فروش',
     description: 'سامانه هوشمند مدیریت مشتریان، حوضچه آزاد سرنخ‌ها و ارزیابی عملکرد فروش.',
   },
 };
@@ -51,6 +51,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.variable}>
+      <head>
+        <title>آلفادسک | سامانه مدیریت مشتریان و تیم فروش</title>
+      </head>
       <body
         suppressHydrationWarning
         className={`${vazirmatn.className} bg-[#121212] text-white selection:bg-[#1DB954] selection:text-black font-sans`}
