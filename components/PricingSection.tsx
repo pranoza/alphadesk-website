@@ -19,7 +19,7 @@ interface PricingSectionProps {
 }
 
 export default function PricingSection({ onOpenDemoModal }: PricingSectionProps) {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annually'>('annually');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annually'>('monthly');
 
   const plans = [
     {
