@@ -117,6 +117,16 @@ export default function Footer() {
                 <span>شنبه تا چهارشنبه ۸:۳۰ الی ۱۷:۳۰</span>
               </div>
             </div>
+
+            {/* eNamad Trust Seal */}
+            <div className="pt-2">
+              <div
+                className="bg-white/95 rounded-xl p-2 border border-[#2a2a2a] inline-flex items-center justify-center shadow-lg hover:border-[#1DB954]/50 transition-colors [&_img]:w-20 [&_img]:h-20 [&_img]:object-contain"
+                dangerouslySetInnerHTML={{
+                  __html: `<a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=8086014&Code=aKLv35YsEBIeyfxc2I2XngMOpZsIQfWo'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=8086014&Code=aKLv35YsEBIeyfxc2I2XngMOpZsIQfWo' alt='' style='cursor:pointer' code='aKLv35YsEBIeyfxc2I2XngMOpZsIQfWo'></a>`,
+                }}
+              />
+            </div>
           </div>
         </div>
 
